@@ -16,6 +16,12 @@ public class SchoolClass {
         this.total_students = total_students;
     }
 
+    public SchoolClass(String class_name, String capacity, Long class_teacher_id) {
+        this.class_name = class_name;
+        this.capacity = capacity;
+        this.class_teacher_id = class_teacher_id;
+    }
+
     public Long getId() {
         return id;
     }

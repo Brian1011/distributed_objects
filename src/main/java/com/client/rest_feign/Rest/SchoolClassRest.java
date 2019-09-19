@@ -24,5 +24,12 @@ public class SchoolClassRest implements CommandLineRunner {
         // get a specific class
         SchoolClass singleClass = schoolClassFeign.getSingleClass(Integer.toUnsignedLong(3));
         System.out.println("Single Class: "+singleClass);
+
+        // post a new class
+        // SchoolClass newClass = schoolClassFeign.postNewClass(new SchoolClass("JAVA SPRING","40", Integer.toUnsignedLong(4)));
+        // System.out.println(newClass);
+
+        // patch class
+
     }
 }
