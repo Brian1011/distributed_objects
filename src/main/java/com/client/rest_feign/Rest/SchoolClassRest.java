@@ -22,6 +22,7 @@ public class SchoolClassRest implements CommandLineRunner {
         System.out.println("Classes "+schoolClass);
 
         // get a specific class
-
+        SchoolClass singleClass = schoolClassFeign.getSingleClass(Integer.toUnsignedLong(3));
+        System.out.println("Single Class: "+singleClass);
     }
 }
