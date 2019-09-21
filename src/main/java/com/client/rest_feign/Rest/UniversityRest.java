@@ -20,5 +20,15 @@ public class UniversityRest implements CommandLineRunner {
         //get all universities
         List<Universities> universities = universityFeign.fetchAllUniversities();
         System.out.println(universities);
+
+        // new university
+        //Universities new_uni = universityFeign.createUniversity(new Universities("KU", "Ruiru"));
+        //System.out.println(new_uni);
+
+        // get by id
+        Universities foundUni = universityFeign.findById(Integer.toUnsignedLong(3));
+        System.out.println(foundUni);
+
+
     }
 }

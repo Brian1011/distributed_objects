@@ -2,6 +2,8 @@ package com.client.rest_feign.feign;
 
 import com.client.rest_feign.models.Universities;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -12,6 +14,14 @@ public interface UniversityFeign {
     //all universities
     @RequestMapping(method = RequestMethod.GET, value = "universities")
     List<Universities> fetchAllUniversities();
+
+    // post new
+    @RequestMapping(method = RequestMethod.POST, value = "universities")
+    Universities createUniversity(@RequestBody Universities universities);
+
+    // get by id
+    @RequestMapping(method = RequestMethod.GET, value = "universities/{id}")
+    Universities findById(@PathVariable(name="id") long id);
 
 
 }
