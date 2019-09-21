@@ -5,12 +5,11 @@ public class Universities {
     private String name;
     private String location;
 
-    public Universities() {
+    private Universities() {
 
     }
 
-    public Universities(Long id, String name, String location) {
-        this.id = id;
+    public Universities(String name, String location) {
         this.name = name;
         this.location = location;
     }
