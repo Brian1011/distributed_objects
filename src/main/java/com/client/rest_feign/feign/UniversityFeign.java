@@ -26,4 +26,8 @@ public interface UniversityFeign {
     // patch
     @RequestMapping(method = RequestMethod.PATCH, value = "universities/{id}")
     Universities updateUni(@PathVariable(name = "id") Long id, @RequestBody Universities universities);
+
+    // delete
+    @RequestMapping(method = RequestMethod.DELETE, value = "universities/{id}")
+    Universities deleteUni(@PathVariable(name = "id") Long id);
 }
