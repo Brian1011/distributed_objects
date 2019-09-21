@@ -22,13 +22,16 @@ public class UniversityRest implements CommandLineRunner {
         System.out.println(universities);
 
         // new university
-        //Universities new_uni = universityFeign.createUniversity(new Universities("KU", "Ruiru"));
-        //System.out.println(new_uni);
+        Universities new_uni = universityFeign.createUniversity(new Universities("KU", "Ruiru"));
+        System.out.println(new_uni);
 
         // get by id
         Universities foundUni = universityFeign.findById(Integer.toUnsignedLong(3));
         System.out.println(foundUni);
 
-
+        // patch
+        foundUni.setLocation("NAKURU");
+        Universities patchUni = universityFeign.updateUni(Integer.toUnsignedLong(3), foundUni);
+        System.out.println(patchUni);
     }
 }

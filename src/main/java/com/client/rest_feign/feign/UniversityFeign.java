@@ -23,5 +23,7 @@ public interface UniversityFeign {
     @RequestMapping(method = RequestMethod.GET, value = "universities/{id}")
     Universities findById(@PathVariable(name="id") long id);
 
-
+    // patch
+    @RequestMapping(method = RequestMethod.PATCH, value = "universities/{id}")
+    Universities updateUni(@PathVariable(name = "id") Long id, @RequestBody Universities universities);
 }
