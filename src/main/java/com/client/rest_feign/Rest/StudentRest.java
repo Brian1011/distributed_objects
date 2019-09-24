@@ -22,6 +22,9 @@ public class StudentRest implements CommandLineRunner {
         System.out.println("All students "+ students);
 
         // post a new student
+        Student new_student = studentFeign.createStudent(new Student("Brian","ICS"));
+        System.out.println(new_student);
+
 
     }
 }
