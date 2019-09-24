@@ -24,5 +24,6 @@ public interface StudentFeign {
     Student studentById(@PathVariable(name = "id") long id);
 
     // patch
-
+    @RequestMapping(method = RequestMethod.PATCH, value = "students/{id}")
+    Student updateStudent(@PathVariable(name = "id") long id, @RequestBody Student student);
 }

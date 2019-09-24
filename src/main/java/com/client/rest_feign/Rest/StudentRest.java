@@ -28,5 +28,11 @@ public class StudentRest implements CommandLineRunner {
         // get by student id
         Student get_student = studentFeign.studentById(Integer.toUnsignedLong(2));
         System.out.println(get_student);
+
+        // patch by student id
+        get_student.setName("Mr. Mutinda");
+        get_student.setCourse("Masters in Data Science and Analysis");
+        Student update_student = studentFeign.updateStudent(get_student.getId(), get_student);
+        System.out.println(update_student);
     }
 }
