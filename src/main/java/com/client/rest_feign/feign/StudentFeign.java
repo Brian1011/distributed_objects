@@ -1,5 +1,6 @@
 package com.client.rest_feign.feign;
 
+import com.client.rest_feign.FeignConfig;
 import com.client.rest_feign.models.Student;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@FeignClient(name = "student", url = "http://localhost:8000/api/")
+@FeignClient(name = "student", url = "http://localhost/api/", configuration = FeignConfig.class)
 public interface StudentFeign {
     // all students
     @RequestMapping(method = RequestMethod.GET, value = "students")
