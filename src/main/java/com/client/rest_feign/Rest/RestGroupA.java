@@ -9,10 +9,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 //@Component
-public class RestCat implements CommandLineRunner {
+public class RestGroupA implements CommandLineRunner {
     private StudentCatFeign studentCatFeign;
 
-    public RestCat(StudentCatFeign studentCatFeign) {
+    public RestGroupA(StudentCatFeign studentCatFeign) {
         this.studentCatFeign = studentCatFeign;
     }
 
